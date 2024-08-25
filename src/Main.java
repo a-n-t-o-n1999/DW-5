@@ -63,16 +63,17 @@ public class Main {
             int b = i * a;
             System.out.println(a + "*" + i + "=" + b);
         }
-        //task1.1
+        //task2.1
         int salary2 = 15000;
         double total2 = 0;
-        for (int i = 1; total2 < 2_459_000; i++) {
-            total2 = total2 * 1.01;
-            total2 = total2 + salary1;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + total2 + " рублей");
+        int n = 1;
+        while (total2 < 2_459_000) {
+            total2 += salary2;
+            System.out.println("Месяц " + n + ", сумма накоплений равна " + total2 + " рублей");
+            n++;
         }
         System.out.println();
-        //task1.2
+        //task2.2
         int q = 1;
         while (q <= 10) {
             System.out.print(q + " ");
@@ -83,7 +84,7 @@ public class Main {
             System.out.print(i + " ");
         }
         System.out.println();
-        //task1.3
+        //task2.3
         int population = 12_000_000;
         int fertility = 17;
         int mortality = 8;
@@ -93,36 +94,43 @@ public class Main {
 
         }
         System.out.println();
-        //task1.4
+        //task2.4
         int contribution = 15_000;
         int i = 1;
         for (; contribution <= 12_000_000; i++) {
             contribution *= 1.07;
             System.out.println("После " + i + " месяца, на счету стало " + contribution + " рублей");
         }
-        //task1.5
+        //task2.5
         int contribution1 = 15_000;
         int i1 = 1;
         for (; contribution1 <= 12_000_000; i1++) {
             contribution1 *= 1.07;
-            if (i1 % 6 == 0) System.out.println("После " + i1 + " месяца, на счету стало " + contribution1 + " рублей");
+            if (i1 % 6 == 0) {
+                System.out.println("После " + i1 + " месяца, на счету стало " + contribution1 + " рублей");
+            }
         }
-        //task1.6
+        //task2.6
         int contribution2 = 15_000;
-        int period = 12*9;
+        int period = 12 * 9;
         for (int i2 = 1; i2 <= period; i2++) {
             contribution2 *= 1.07;
-            if (i2 % 6 == 0) System.out.println("После " + i2 + " месяца, на счету стало " + contribution2 + " рублей");
+            if (i2 % 6 == 0) {
+                System.out.println("После " + i2 + " месяца, на счету стало " + contribution2 + " рублей");
+            }
         }
-        //task1.7
+        //task2.7
         int dateFriday = 5;
-        for (; dateFriday <= 31; dateFriday+=7) {
-            System.out.println("Сегодня пятница, "+ dateFriday + "-е число. Необходимо подготовить отчет");
+        for (; dateFriday <= 31; dateFriday += 7) {
+            System.out.println("Сегодня пятница, " + dateFriday + "-е число. Необходимо подготовить отчет");
         }
-        //task1.8
+        //task2.8
         int year = 2024;
-        for (int j = 0; j <year+100 ; j+=79) {
-            if (j>year-200) System.out.println(j);
+        int yearBeforeCurrent = year - 200;
+        for (int j = 0; j < year + 100; j += 79) {
+            if (j > yearBeforeCurrent) {
+                System.out.println(j);
+            }
         }
 
     }
